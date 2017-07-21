@@ -1,0 +1,28 @@
+<div [ngClass]="materialTheme.id" class="app-frame">  
+  <md-toolbar color="primary" class="fixed-toolbar">
+    <button md-button (click)="sidenav.open()"><md-icon>menu</md-icon> Menu</button>
+    <span class="toolbar-header">ASP.NET Core Angular Material</span>
+    <span class="example-spacer"></span>
+    <button md-button *ngFor="let theme of themes" (click)="setTheme(theme)">{{theme.display}}</button>
+    <a md-button href="https://github.com/JaimeStill/AspNetCoreMaterial" target="_blank">GitHub</a>
+  </md-toolbar>
+  <md-sidenav-container class="mat-typography">
+    <md-sidenav #sidenav>
+      <md-nav-list>
+        <h3 md-subheader>Getting Started</h3>
+        <a md-list-item routerLink="/home" routerLinkActive="active"  (click)="sidenav.close()">Home</a>
+        <a md-menu-item overlapTrigger="false" [mdMenuTriggerFor]="menu">Tables <md-icon>keyboard_arrow_down</md-icon></a>
+        <md-menu #menu="mdMenu">
+            <a md-menu-item routerLink="/table-menu" routerLinkActive="active" (click)="sidenav.close()">Table List</a>
+            <a md-menu-item routerLink="/all-tables" routerLinkActive="active" (click)="sidenav.close()">Tables</a>
+            <a md-menu-item routerLink="/table-basic" routerLinkActive="active" (click)="sidenav.close()">Basic Table</a>
+        </md-menu>
+        <!--<a md-list-item routerLink="/table-menu" routerLinkActive="active" (click)="sidenav.close()">Table List</a>
+        <a md-list-item routerLink="/all-tables" routerLinkActive="active" (click)="sidenav.close()">Tables</a>-->
+      </md-nav-list>
+    </md-sidenav>
+    <div class="app-body">
+      <router-outlet (activate)="onActivate($event)"></router-outlet>
+    </div>
+  </md-sidenav-container>
+</div>
