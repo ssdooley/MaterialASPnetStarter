@@ -15,6 +15,9 @@ import { AllTablesComponent } from './components/table/all-tables.component';
 import { TableBasicComponent } from './components/table/table-basic.component';
 import { TableMenuComponent } from './components/table/table-menu.component';
 
+import { ControlMenuComponent } from './components/controls/control-menu.component';
+import { AutocompleteComponent } from './components/controls/autocomplete.component';
+
 
 export const sharedConfig: NgModule = {
     bootstrap: [ AppComponent ],
@@ -24,7 +27,9 @@ export const sharedConfig: NgModule = {
         PrismComponent,
         AllTablesComponent,
         TableBasicComponent,
-        TableMenuComponent
+        TableMenuComponent,
+        AutocompleteComponent,
+        ControlMenuComponent
     ],
     providers: [
         ThemeService,
@@ -37,6 +42,8 @@ export const sharedConfig: NgModule = {
             { path: 'home', component: HomeComponent },
             { path: 'table-menu', component: TableMenuComponent },
             { path: 'table-basic', component: TableBasicComponent },
+            { path: 'control-menu', component: ControlMenuComponent },
+            { path: 'auto-complete', component: AutocompleteComponent },
             { path: 'all-tables', component: AllTablesComponent },
             { path: '**', redirectTo: 'home' }
         ])
