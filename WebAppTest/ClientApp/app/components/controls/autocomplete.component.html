@@ -1,9 +1,12 @@
-﻿<h3>AutoComplete</h3>
-<!--<md-input-container>
-  <input mdInput placeholder="Theme" [mdAutocomplete]="auto" [formControl]="themeCtrl">
+﻿<md-toolbar>Autocomplete</md-toolbar>
+<p>
+    The autocomplete is a normal text input enhanced by a panel of suggested options. See <a class="link" href="https://material.angular.io/components/autocomplete/overview">documentation</a>.
+</p>
+<md-input-container>
+    <input mdInput placeholder="Theme" [mdAutocomplete]="auto" [formControl]="themeCtrl">
 </md-input-container>
 <md-autocomplete #auto="mdAutocomplete" [displayWith]="displayTheme">
-  <md-option *ngFor="let theme of filteredThemes | async" [value]="theme">
-    {{ theme.display }}
-  </md-option>    
-</md-autocomplete>-->
+    <md-option *ngFor="let theme of filteredThemes | async" [value]="theme">
+        {{ theme.display }}
+    </md-option>
+</md-autocomplete>

@@ -1,10 +1,5 @@
 ﻿<div class="example-container mat-elevation-z8">
-    <h2>Filter Table</h2>
-    <div class="example-header">
-        <md-input-container floatPlaceholder="never">
-            <input mdInput #filter placeholder="Filter Users">
-        </md-input-container>
-    </div>
+    <h2>Paginated Table</h2>
     <md-table #table [dataSource]="dataSource">
         <ng-container cdkColumnDef="userId">
             <md-header-cell *cdkHeaderCellDef> ID </md-header-cell>
@@ -25,4 +20,6 @@
         <md-header-row *cdkHeaderRowDef="displayedColumns"></md-header-row>
         <md-row *cdkRowDef="let row; columns: displayedColumns;"></md-row>
     </md-table>
+    <md-paginator #paginator [length]="dbService.data.length" [pageIndex]="0" [pageSize]="25" [pageSizeOptions]="[5, 10, 25, 100]">
+    </md-paginator>
 </div>

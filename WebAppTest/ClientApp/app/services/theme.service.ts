@@ -17,12 +17,18 @@ export class ThemeService {
         { id: 'red-app', display: 'Red' },
         { id: 'blue-app', display: 'Blue' }
     ];
-    
+
+    constructor (private overlayContainer: OverlayContainer) {
+        this.themeSubject.next(this.themes[0]);
+        overlayContainer.themeClass = this.themes[0].id;
+    }
+
     getThemes(): Array<Theme> {
         return this.themes;
     }
 
     setTheme(theme: Theme) {
         this.themeSubject.next(theme);
+        this.overlayContainer.themeClass = theme.id;
     }
 }
