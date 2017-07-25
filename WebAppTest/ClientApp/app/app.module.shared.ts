@@ -14,6 +14,8 @@ import { PrismComponent } from './components/prism/prism.component';
 import { AllTablesComponent } from './components/table/all-tables.component';
 import { TableBasicComponent } from './components/table/table-basic.component';
 import { TableMenuComponent } from './components/table/table-menu.component';
+import { TableFilterComponent } from './components/table/table-filter.component';
+import { TableSortComponent } from './components/table/table-sort.component';
 
 import { ControlMenuComponent } from './components/controls/control-menu.component';
 import { AutocompleteComponent } from './components/controls/autocomplete.component';
@@ -28,6 +30,8 @@ export const sharedConfig: NgModule = {
         AllTablesComponent,
         TableBasicComponent,
         TableMenuComponent,
+        TableFilterComponent,
+        TableSortComponent,
         AutocompleteComponent,
         ControlMenuComponent
     ],
@@ -42,6 +46,8 @@ export const sharedConfig: NgModule = {
             { path: 'home', component: HomeComponent },
             { path: 'table-menu', component: TableMenuComponent },
             { path: 'table-basic', component: TableBasicComponent },
+            { path: 'table-filter', component: TableFilterComponent },
+            { path: 'table-sort', component: TableSortComponent },
             { path: 'control-menu', component: ControlMenuComponent },
             { path: 'auto-complete', component: AutocompleteComponent },
             { path: 'all-tables', component: AllTablesComponent },
