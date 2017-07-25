@@ -13,6 +13,8 @@ import { PrismComponent } from './components/prism/prism.component';
 
 import { AllTablesComponent } from './components/table/all-tables.component';
 import { TableBasicComponent } from './components/table/table-basic.component';
+import { TableFilterComponent } from './components/table/table-filter.component';
+import { TableSortComponent } from './components/table/table-sort.component';
 import { TableMenuComponent } from './components/table/table-menu.component';
 
 
@@ -24,7 +26,9 @@ export const sharedConfig: NgModule = {
         PrismComponent,
         AllTablesComponent,
         TableBasicComponent,
-        TableMenuComponent
+        TableMenuComponent,
+        TableSortComponent,
+        TableFilterComponent
     ],
     providers: [
         ThemeService,
@@ -37,6 +41,8 @@ export const sharedConfig: NgModule = {
             { path: 'home', component: HomeComponent },
             { path: 'table-menu', component: TableMenuComponent },
             { path: 'table-basic', component: TableBasicComponent },
+            { path: 'table-filter', component: TableFilterComponent },
+            { path: 'table-sort', component: TableSortComponent },
             { path: 'all-tables', component: AllTablesComponent },
             { path: '**', redirectTo: 'home' }
         ])
