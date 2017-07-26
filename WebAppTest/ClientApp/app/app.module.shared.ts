@@ -17,13 +17,18 @@ import { TableMenuComponent } from './components/table/table-menu.component';
 import { TableFilterComponent } from './components/table/table-filter.component';
 import { TableSortComponent } from './components/table/table-sort.component';
 import { TablePaginatorComponent } from './components/table/table-paginator.component';
+import { TableCompleteComponent } from './components/table/table-complete.component';
 
 import { ControlMenuComponent } from './components/controls/control-menu.component';
 import { AutocompleteComponent } from './components/controls/autocomplete.component';
+import { CheckboxComponent } from './components/controls/checkbox.component';
+import { DatepickerComponent } from './components/controls/datepicker.component';
+import { InputComponent } from './components/controls/input.component';
+import { RadioComponent } from './components/controls/radio.component';
 
 
 export const sharedConfig: NgModule = {
-    bootstrap: [ AppComponent ],
+    bootstrap: [AppComponent],
     declarations: [
         AppComponent,
         HomeComponent,
@@ -34,8 +39,13 @@ export const sharedConfig: NgModule = {
         TableFilterComponent,
         TableSortComponent,
         TablePaginatorComponent,
+        TableCompleteComponent,
         AutocompleteComponent,
-        ControlMenuComponent
+        ControlMenuComponent,
+        CheckboxComponent,
+        DatepickerComponent,
+        InputComponent,
+        RadioComponent
     ],
     providers: [
         ThemeService,
@@ -51,8 +61,13 @@ export const sharedConfig: NgModule = {
             { path: 'table-filter', component: TableFilterComponent },
             { path: 'table-sort', component: TableSortComponent },
             { path: 'table-paginator', component: TablePaginatorComponent },
+            { path: 'table-complete', component: TableCompleteComponent },
             { path: 'control-menu', component: ControlMenuComponent },
             { path: 'auto-complete', component: AutocompleteComponent },
+            { path: 'checkbox-card', component: CheckboxComponent },
+            { path: 'date-picker', component: DatepickerComponent },
+            { path: 'input-form', component: InputComponent },
+            { path: 'radio-dial', component: RadioComponent },
             { path: 'all-tables', component: AllTablesComponent },
             { path: '**', redirectTo: 'home' }
         ])

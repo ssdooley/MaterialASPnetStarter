@@ -1,0 +1,6 @@
+﻿<h3>Select App Theme:</h3>
+<md-radio-group class="example-radio-group" (change)="setTheme($event)">
+    <md-radio-button class="example-radio-button" *ngFor="let theme of themes" [value]="theme">
+        {{theme.display}}
+    </md-radio-button>
+</md-radio-group>

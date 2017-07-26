@@ -4,7 +4,7 @@
         <span class="toolbar-header">ASP.NET Core Angular Material</span>
         <span class="example-spacer"></span>
         <button md-button *ngFor="let theme of themes" (click)="setTheme(theme)">{{theme.display}}</button>
-        <a md-button href="https://github.com/JaimeStill/AspNetCoreMaterial" target="_blank">GitHub</a>
+        <a md-button href="https://github.com/ssdooley/MaterialASPnetStarter" target="_blank">GitHub</a>
     </md-toolbar>
     <md-sidenav-container class="mat-typography">
         <md-sidenav #sidenav>
@@ -18,10 +18,15 @@
                     <a md-menu-item routerLink="/table-filter" routerLinkActive="active" (click)="sidenav.close()">Filter Table</a>
                     <a md-menu-item routerLink="/table-sort" routerLinkActive="active" (click)="sidenav.close()">Sort Table</a>
                     <a md-menu-item routerLink="/table-paginator" routerLinkActive="active" (click)="sidenav.close()">Paginated Table</a>
+                    <a md-menu-item routerLink="/table-complete" routerLinkActivate="active" (click)="sidenav.close()">Complete Table</a>
                 </md-menu>
                 <a md-menu-item overlapTrigger="false" [mdMenuTriggerFor]="menuControl">Controls<md-icon>keyboard_arrow_down</md-icon></a>
                 <md-menu #menuControl="mdMenu" [overlapTrigger]="false">
                     <a md-menu-item routerLink="/auto-complete" routerLinkActive="active" (click)="sidenav.close()">Autocomplete</a>
+                    <a md-menu-item routerLink="/checkbox-card" routerLinkActive="active" (click)="sidenav.close()">Checkbox</a>
+                    <a md-menu-item routerLink="/date-picker" routerLinkActivate="active" (click)="sidenav.close()">DatePicker</a>
+                    <a md-menu-item routerLink="/input-form" routerLinkActivate="active" (click)="sidenav.close()">Input Form</a>
+                    <a md-menu-item routerLink="/radio-dial" routerLinkActivate="active" (click)="sidenav.close()">Radio</a>
                 </md-menu>
             </md-nav-list>
         </md-sidenav>
