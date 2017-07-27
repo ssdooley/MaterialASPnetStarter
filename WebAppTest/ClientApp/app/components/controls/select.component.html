@@ -1,0 +1,6 @@
+﻿<h3>Select App Theme</h3>
+<md-select prefix="Theme" (change)="setTheme($event)">
+    <md-option *ngFor="let theme of themes" [value]="theme">
+        {{theme.display}}
+    </md-option>
+</md-select>

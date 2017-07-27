@@ -1,0 +1,13 @@
+﻿<md-sidenav-container class="example-container" [ngClass]="materialTheme">
+    <md-sidenav #demoSidenav>
+        <md-toolbar color="accent">Select a Theme</md-toolbar>
+        <div *ngFor="let theme of themes" class="button-container">
+            <button type="button" class="example-side-button" md-raised-button (click)="setTheme(theme, demoSidenav)">{{theme.display}}</button>
+        </div>
+    </md-sidenav>
+    <div>
+        <md-toolbar color="primary">
+            <button type="button" class="example-button" md-button (click)="demoSidenav.open()"><md-icon>menu</md-icon></button> Sidenav Demo
+        </md-toolbar>
+    </div>
+</md-sidenav-container>

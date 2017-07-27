@@ -1,0 +1,20 @@
+﻿.example-container {
+    width: 500px;
+    height: 300px;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    margin: 20px;
+}
+
+.example-button {
+    margin: 15px 10px;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.example-side-button {
+    margin-top: 10px;
+}

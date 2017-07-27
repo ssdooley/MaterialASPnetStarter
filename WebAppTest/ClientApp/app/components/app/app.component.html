@@ -11,6 +11,29 @@
             <md-nav-list>
                 <h3 md-subheader>Getting Started</h3>
                 <a md-list-item routerLink="/home" routerLinkActive="active" (click)="sidenav.close()">Home</a>
+                <a md-menu-item overlapTrigger="false" [mdMenuTriggerFor]="menuControl">Controls<md-icon>keyboard_arrow_down</md-icon></a>
+                <md-menu #menuControl="mdMenu" [overlapTrigger]="false">
+                    <a md-menu-item routerLink="/auto-complete" routerLinkActive="active" (click)="sidenav.close()">Autocomplete</a>
+                    <a md-menu-item routerLink="/checkbox-card" routerLinkActive="active" (click)="sidenav.close()">Checkbox</a>
+                    <a md-menu-item routerLink="/date-picker" routerLinkActivate="active" (click)="sidenav.close()">DatePicker</a>
+                    <a md-menu-item routerLink="/input-form" routerLinkActivate="active" (click)="sidenav.close()">Input Form</a>
+                    <a md-menu-item routerLink="/radio-dial" routerLinkActivate="active" (click)="sidenav.close()">Radio</a>
+                    <a md-menu-item routerLink="/slider-control" routerLinkActivate="active" (click)="sidenav.close()">Slider</a>
+                    <a md-menu-item routerLink="/slider-toggle" routerLinkActivate="active" (click)="sidenav.close()">Slider Toggle</a>
+                </md-menu>
+                <a md-menu-item overlapTrigger="false" [mdMenuTriggerFor]="menuNav">Navigation<md-icon>keyboard_arrow_down</md-icon></a>
+                <md-menu #menuNav="mdMenu" [overlapTrigger]="false">
+                    <a md-menu-item routerLink="/menu-item" routerLinkActivate="active" (click)="sidenav.close()">Menu</a>
+                    <a md-menu-item routerLink="/sidenav-item" routerLinkActivate="active" (click)="sidenav.close()">Sidenav</a>
+                    <a md-menu-item routerLink="/toolbar-item" routerLinkActivate="active" (click)="sidenav.close()">Toolbar</a>
+                </md-menu>
+                <a md-menu-item overlapTrigger="false" [mdMenuTriggerFor]="menuLayout">Layout<md-icon>keyboard_arrow_down</md-icon></a>
+                <md-menu #menuLayout="mdMenu" [overlapTrigger]="false">
+                    <a md-menu-item routerLink="/list-item" routerLinkActivate="active" (click)="sidenav.close()">List</a>
+                    <a md-menu-item routerLink="/sidenav-item" routerLinkActivate="active" (click)="sidenav.close()">Grid List</a>
+                    <a md-menu-item routerLink="/toolbar-item" routerLinkActivate="active" (click)="sidenav.close()">Card</a>
+                    <a md-menu-item routerLink="/toolbar-item" routerLinkActivate="active" (click)="sidenav.close()">Tabs</a>
+                </md-menu>
                 <a md-menu-item [mdMenuTriggerFor]="menu">Tables <md-icon>keyboard_arrow_down</md-icon></a>
                 <md-menu #menu="mdMenu" [overlapTrigger]="false">
                     <a md-menu-item routerLink="/all-tables" routerLinkActive="active" (click)="sidenav.close()">All Tables</a>
@@ -19,14 +42,6 @@
                     <a md-menu-item routerLink="/table-sort" routerLinkActive="active" (click)="sidenav.close()">Sort Table</a>
                     <a md-menu-item routerLink="/table-paginator" routerLinkActive="active" (click)="sidenav.close()">Paginated Table</a>
                     <a md-menu-item routerLink="/table-complete" routerLinkActivate="active" (click)="sidenav.close()">Complete Table</a>
-                </md-menu>
-                <a md-menu-item overlapTrigger="false" [mdMenuTriggerFor]="menuControl">Controls<md-icon>keyboard_arrow_down</md-icon></a>
-                <md-menu #menuControl="mdMenu" [overlapTrigger]="false">
-                    <a md-menu-item routerLink="/auto-complete" routerLinkActive="active" (click)="sidenav.close()">Autocomplete</a>
-                    <a md-menu-item routerLink="/checkbox-card" routerLinkActive="active" (click)="sidenav.close()">Checkbox</a>
-                    <a md-menu-item routerLink="/date-picker" routerLinkActivate="active" (click)="sidenav.close()">DatePicker</a>
-                    <a md-menu-item routerLink="/input-form" routerLinkActivate="active" (click)="sidenav.close()">Input Form</a>
-                    <a md-menu-item routerLink="/radio-dial" routerLinkActivate="active" (click)="sidenav.close()">Radio</a>
                 </md-menu>
             </md-nav-list>
         </md-sidenav>
