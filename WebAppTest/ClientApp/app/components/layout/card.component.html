@@ -1,0 +1,17 @@
+﻿<div class="example-content">
+    <md-card *ngFor="let data of (myData ? myData.slice(0,3):[]); let i=index">
+        <md-card-header>
+            <md-card-title>{{ data.title }}</md-card-title>
+            <md-card-subtitle><a href="https://jsonplaceholder.typicode.com/" target="_blank">JSONPlaceholder</a></md-card-subtitle>
+            <img md-card-avatar [src]="data.thumbnailUrl" />
+        </md-card-header>
+        <img md-card-image [src]="data.url" />
+        <md-card-content>
+            {{ data.title }}
+        </md-card-content>
+        <md-card-actions>
+            <button md-button>LIKE</button>
+            <button md-button>SHARE</button>
+        </md-card-actions>
+    </md-card>
+</div>

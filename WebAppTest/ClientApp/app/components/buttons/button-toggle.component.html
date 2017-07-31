@@ -1,0 +1,17 @@
+﻿<md-card>
+    <md-card-content>
+        <h2 class="example-h2">Button Toggle Configuration</h2>
+        <div class="example-section">
+            <md-checkbox [(ngModel)]="vertical" class="example-margin">Vertical Button Toggle Group</md-checkbox>
+            <md-checkbox [(ngModel)]="disabled" class="example-margin">Button Toggle Disabled</md-checkbox>
+        </div>
+        <h2 class="example-h2">Theme</h2>
+        <div class="example-result-section">
+           <md-button-toggle-group #group="mdButtonToggleGroup" [vertical]="vertical">
+               <md-button-toggle *ngFor="let theme of themes" value="theme" (click)="disabled ? return : setTheme(theme)" [disabled]="disabled">
+                   {{theme.display}}
+               </md-button-toggle>
+           </md-button-toggle-group>
+        </div>
+    </md-card-content>
+</md-card>

@@ -1,0 +1,12 @@
+﻿.example-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+    .example-content md-card {
+        margin: 20px;
+        display: inline-block;
+        max-width: 430px;
+    }

@@ -35,6 +35,16 @@ import { MenuComponent } from './components/navigation/menu.component';
 import { ToolbarComponent } from './components/navigation/toolbar.component';
 
 import { ListComponent } from './components/layout/list.component';
+import { GridListComponent } from './components/layout/grid-list.component';
+import { CardComponent } from './components/layout/card.component';
+import { TabsComponent } from './components/layout/tabs.component';
+
+import { ButtonComponent } from './components/buttons/button.component';
+import { ButtonToggleComponent } from './components/buttons/button-toggle.component';
+import { ChipComponent } from './components/buttons/chip.component';
+import { IconComponent } from './components/buttons/icon.component';
+import { ProgressSpinnerComponent } from './components/buttons/progress-spinner.component';
+import { ProgressBarComponent } from './components/buttons/progress-bar.component';
 
 
 export const sharedConfig: NgModule = {
@@ -64,6 +74,15 @@ export const sharedConfig: NgModule = {
         MenuComponent,
         ToolbarComponent,
         ListComponent,
+        GridListComponent,
+        CardComponent,
+        TabsComponent,
+        ButtonComponent,
+        ButtonToggleComponent,
+        ChipComponent,
+        IconComponent,
+        ProgressSpinnerComponent,
+        ProgressBarComponent,
     ],
     providers: [
         ThemeService,
@@ -93,6 +112,15 @@ export const sharedConfig: NgModule = {
             { path: 'menu-item', component: MenuComponent },
             { path: 'toolbar-item', component: ToolbarComponent },
             { path: 'list-item', component: ListComponent },
+            { path: 'grid-list', component: GridListComponent },
+            { path: 'card-item', component: CardComponent },
+            { path: 'tab-item', component: TabsComponent },
+            { path: 'button-item', component: ButtonComponent },
+            { path: 'button-toggle', component: ButtonToggleComponent },
+            { path: 'icon-item', component: IconComponent },
+            { path: 'chip-item', component: ChipComponent },
+            { path: 'progress-spinner', component: ProgressSpinnerComponent },
+            { path: 'progress-bar', component: ProgressBarComponent },
             { path: 'all-tables', component: AllTablesComponent },
             { path: '**', redirectTo: 'home' }
         ])

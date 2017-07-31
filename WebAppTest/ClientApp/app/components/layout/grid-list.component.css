@@ -1,0 +1,14 @@
+﻿md-grid-list {
+    margin: 20px;
+    height: 600px;
+    justify-content: center;
+}
+
+.example-grid-tile {
+    background-color: #444;
+}
+
+.grid-image {
+    width: 90%;
+   
+}

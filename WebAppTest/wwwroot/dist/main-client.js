@@ -59,7 +59,7 @@
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "ea76a85acd6e9a685bb4"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "fbda294cb01c25b33860"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
@@ -7228,6 +7228,15 @@ var demo_sidenav_component_1 = __webpack_require__(144);
 var menu_component_1 = __webpack_require__(145);
 var toolbar_component_1 = __webpack_require__(147);
 var list_component_1 = __webpack_require__(143);
+var grid_list_component_1 = __webpack_require__(412);
+var card_component_1 = __webpack_require__(416);
+var tabs_component_1 = __webpack_require__(420);
+var button_component_1 = __webpack_require__(425);
+var button_toggle_component_1 = __webpack_require__(424);
+var chip_component_1 = __webpack_require__(426);
+var icon_component_1 = __webpack_require__(427);
+var progress_spinner_component_1 = __webpack_require__(429);
+var progress_bar_component_1 = __webpack_require__(428);
 exports.sharedConfig = {
     bootstrap: [app_component_1.AppComponent],
     declarations: [
@@ -7255,6 +7264,15 @@ exports.sharedConfig = {
         menu_component_1.MenuComponent,
         toolbar_component_1.ToolbarComponent,
         list_component_1.ListComponent,
+        grid_list_component_1.GridListComponent,
+        card_component_1.CardComponent,
+        tabs_component_1.TabsComponent,
+        button_component_1.ButtonComponent,
+        button_toggle_component_1.ButtonToggleComponent,
+        chip_component_1.ChipComponent,
+        icon_component_1.IconComponent,
+        progress_spinner_component_1.ProgressSpinnerComponent,
+        progress_bar_component_1.ProgressBarComponent,
     ],
     providers: [
         theme_service_1.ThemeService,
@@ -7284,6 +7302,15 @@ exports.sharedConfig = {
             { path: 'menu-item', component: menu_component_1.MenuComponent },
             { path: 'toolbar-item', component: toolbar_component_1.ToolbarComponent },
             { path: 'list-item', component: list_component_1.ListComponent },
+            { path: 'grid-list', component: grid_list_component_1.GridListComponent },
+            { path: 'card-item', component: card_component_1.CardComponent },
+            { path: 'tab-item', component: tabs_component_1.TabsComponent },
+            { path: 'button-item', component: button_component_1.ButtonComponent },
+            { path: 'button-toggle', component: button_toggle_component_1.ButtonToggleComponent },
+            { path: 'icon-item', component: icon_component_1.IconComponent },
+            { path: 'chip-item', component: chip_component_1.ChipComponent },
+            { path: 'progress-spinner', component: progress_spinner_component_1.ProgressSpinnerComponent },
+            { path: 'progress-bar', component: progress_bar_component_1.ProgressBarComponent },
             { path: 'all-tables', component: all_tables_component_1.AllTablesComponent },
             { path: '**', redirectTo: 'home' }
         ])
@@ -12257,7 +12284,7 @@ module.exports = XmlEntities;
 /* 334 */
 /***/ (function(module, exports) {
 
-module.exports = "<div [ngClass]=\"materialTheme.id\" class=\"app-frame\">\r\n    <md-toolbar color=\"primary\" class=\"fixed-toolbar\">\r\n        <button md-button (click)=\"sidenav.open()\"><md-icon>menu</md-icon> Menu</button>\r\n        <span class=\"toolbar-header\">ASP.NET Core Angular Material</span>\r\n        <span class=\"example-spacer\"></span>\r\n        <button md-button *ngFor=\"let theme of themes\" (click)=\"setTheme(theme)\">{{theme.display}}</button>\r\n        <a md-button href=\"https://github.com/ssdooley/MaterialASPnetStarter\" target=\"_blank\">GitHub</a>\r\n    </md-toolbar>\r\n    <md-sidenav-container class=\"mat-typography\">\r\n        <md-sidenav #sidenav>\r\n            <md-nav-list>\r\n                <h3 md-subheader>Getting Started</h3>\r\n                <a md-list-item routerLink=\"/home\" routerLinkActive=\"active\" (click)=\"sidenav.close()\">Home</a>\r\n                <a md-menu-item overlapTrigger=\"false\" [mdMenuTriggerFor]=\"menuControl\">Controls<md-icon>keyboard_arrow_down</md-icon></a>\r\n                <md-menu #menuControl=\"mdMenu\" [overlapTrigger]=\"false\">\r\n                    <a md-menu-item routerLink=\"/auto-complete\" routerLinkActive=\"active\" (click)=\"sidenav.close()\">Autocomplete</a>\r\n                    <a md-menu-item routerLink=\"/checkbox-card\" routerLinkActive=\"active\" (click)=\"sidenav.close()\">Checkbox</a>\r\n                    <a md-menu-item routerLink=\"/date-picker\" routerLinkActivate=\"active\" (click)=\"sidenav.close()\">DatePicker</a>\r\n                    <a md-menu-item routerLink=\"/input-form\" routerLinkActivate=\"active\" (click)=\"sidenav.close()\">Input Form</a>\r\n                    <a md-menu-item routerLink=\"/radio-dial\" routerLinkActivate=\"active\" (click)=\"sidenav.close()\">Radio</a>\r\n                    <a md-menu-item routerLink=\"/slider-control\" routerLinkActivate=\"active\" (click)=\"sidenav.close()\">Slider</a>\r\n                    <a md-menu-item routerLink=\"/slider-toggle\" routerLinkActivate=\"active\" (click)=\"sidenav.close()\">Slider Toggle</a>\r\n                </md-menu>\r\n                <a md-menu-item overlapTrigger=\"false\" [mdMenuTriggerFor]=\"menuNav\">Navigation<md-icon>keyboard_arrow_down</md-icon></a>\r\n                <md-menu #menuNav=\"mdMenu\" [overlapTrigger]=\"false\">\r\n                    <a md-menu-item routerLink=\"/menu-item\" routerLinkActivate=\"active\" (click)=\"sidenav.close()\">Menu</a>\r\n                    <a md-menu-item routerLink=\"/sidenav-item\" routerLinkActivate=\"active\" (click)=\"sidenav.close()\">Sidenav</a>\r\n                    <a md-menu-item routerLink=\"/toolbar-item\" routerLinkActivate=\"active\" (click)=\"sidenav.close()\">Toolbar</a>\r\n                </md-menu>\r\n                <a md-menu-item overlapTrigger=\"false\" [mdMenuTriggerFor]=\"menuLayout\">Layout<md-icon>keyboard_arrow_down</md-icon></a>\r\n                <md-menu #menuLayout=\"mdMenu\" [overlapTrigger]=\"false\">\r\n                    <a md-menu-item routerLink=\"/list-item\" routerLinkActivate=\"active\" (click)=\"sidenav.close()\">List</a>\r\n                    <a md-menu-item routerLink=\"/sidenav-item\" routerLinkActivate=\"active\" (click)=\"sidenav.close()\">Grid List</a>\r\n                    <a md-menu-item routerLink=\"/toolbar-item\" routerLinkActivate=\"active\" (click)=\"sidenav.close()\">Card</a>\r\n                    <a md-menu-item routerLink=\"/toolbar-item\" routerLinkActivate=\"active\" (click)=\"sidenav.close()\">Tabs</a>\r\n                </md-menu>\r\n                <a md-menu-item [mdMenuTriggerFor]=\"menu\">Tables <md-icon>keyboard_arrow_down</md-icon></a>\r\n                <md-menu #menu=\"mdMenu\" [overlapTrigger]=\"false\">\r\n                    <a md-menu-item routerLink=\"/all-tables\" routerLinkActive=\"active\" (click)=\"sidenav.close()\">All Tables</a>\r\n                    <a md-menu-item routerLink=\"/table-basic\" routerLinkActive=\"active\" (click)=\"sidenav.close()\">Basic Table</a>\r\n                    <a md-menu-item routerLink=\"/table-filter\" routerLinkActive=\"active\" (click)=\"sidenav.close()\">Filter Table</a>\r\n                    <a md-menu-item routerLink=\"/table-sort\" routerLinkActive=\"active\" (click)=\"sidenav.close()\">Sort Table</a>\r\n                    <a md-menu-item routerLink=\"/table-paginator\" routerLinkActive=\"active\" (click)=\"sidenav.close()\">Paginated Table</a>\r\n                    <a md-menu-item routerLink=\"/table-complete\" routerLinkActivate=\"active\" (click)=\"sidenav.close()\">Complete Table</a>\r\n                </md-menu>\r\n            </md-nav-list>\r\n        </md-sidenav>\r\n        <div class=\"app-body\">\r\n            <router-outlet (activate)=\"onActivate($event)\"></router-outlet>\r\n        </div>\r\n    </md-sidenav-container>\r\n</div>";
+module.exports = "<div [ngClass]=\"materialTheme.id\" class=\"app-frame\">\r\n    <md-toolbar color=\"primary\" class=\"fixed-toolbar\">\r\n        <button md-button (click)=\"sidenav.open()\"><md-icon>menu</md-icon> Menu</button>\r\n        <span class=\"toolbar-header\">ASP.NET Core Angular Material</span>\r\n        <span class=\"example-spacer\"></span>\r\n        <button md-button *ngFor=\"let theme of themes\" (click)=\"setTheme(theme)\">{{theme.display}}</button>\r\n        <a md-button href=\"https://github.com/ssdooley/MaterialASPnetStarter\" target=\"_blank\">GitHub</a>\r\n    </md-toolbar>\r\n    <md-sidenav-container class=\"mat-typography\">\r\n        <md-sidenav #sidenav>\r\n            <md-nav-list>\r\n                <h3 md-subheader>Getting Started</h3>\r\n                <a md-list-item routerLink=\"/home\" routerLinkActive=\"active\" (click)=\"sidenav.close()\">Home</a>\r\n                <a md-menu-item overlapTrigger=\"false\" [mdMenuTriggerFor]=\"menuControl\">Controls<md-icon>keyboard_arrow_down</md-icon></a>\r\n                <md-menu #menuControl=\"mdMenu\" [overlapTrigger]=\"false\">\r\n                    <a md-menu-item routerLink=\"/auto-complete\" routerLinkActive=\"active\" (click)=\"sidenav.close()\">Autocomplete</a>\r\n                    <a md-menu-item routerLink=\"/checkbox-card\" routerLinkActive=\"active\" (click)=\"sidenav.close()\">Checkbox</a>\r\n                    <a md-menu-item routerLink=\"/date-picker\" routerLinkActivate=\"active\" (click)=\"sidenav.close()\">DatePicker</a>\r\n                    <a md-menu-item routerLink=\"/input-form\" routerLinkActivate=\"active\" (click)=\"sidenav.close()\">Input Form</a>\r\n                    <a md-menu-item routerLink=\"/radio-dial\" routerLinkActivate=\"active\" (click)=\"sidenav.close()\">Radio</a>\r\n                    <a md-menu-item routerLink=\"/slider-control\" routerLinkActivate=\"active\" (click)=\"sidenav.close()\">Slider</a>\r\n                    <a md-menu-item routerLink=\"/slider-toggle\" routerLinkActivate=\"active\" (click)=\"sidenav.close()\">Slider Toggle</a>\r\n                </md-menu>\r\n                <a md-menu-item overlapTrigger=\"false\" [mdMenuTriggerFor]=\"menuNav\">Navigation<md-icon>keyboard_arrow_down</md-icon></a>\r\n                <md-menu #menuNav=\"mdMenu\" [overlapTrigger]=\"false\">\r\n                    <a md-menu-item routerLink=\"/menu-item\" routerLinkActivate=\"active\" (click)=\"sidenav.close()\">Menu</a>\r\n                    <a md-menu-item routerLink=\"/sidenav-item\" routerLinkActivate=\"active\" (click)=\"sidenav.close()\">Sidenav</a>\r\n                    <a md-menu-item routerLink=\"/toolbar-item\" routerLinkActivate=\"active\" (click)=\"sidenav.close()\">Toolbar</a>\r\n                </md-menu>\r\n                <a md-menu-item overlapTrigger=\"false\" [mdMenuTriggerFor]=\"menuLayout\">Layout<md-icon>keyboard_arrow_down</md-icon></a>\r\n                <md-menu #menuLayout=\"mdMenu\" [overlapTrigger]=\"false\">\r\n                    <a md-menu-item routerLink=\"/list-item\" routerLinkActivate=\"active\" (click)=\"sidenav.close()\">List</a>\r\n                    <a md-menu-item routerLink=\"/grid-list\" routerLinkActivate=\"active\" (click)=\"sidenav.close()\">Grid List</a>\r\n                    <a md-menu-item routerLink=\"/card-item\" routerLinkActivate=\"active\" (click)=\"sidenav.close()\">Card</a>\r\n                    <a md-menu-item routerLink=\"/tab-item\" routerLinkActivate=\"active\" (click)=\"sidenav.close()\">Tabs</a>\r\n                </md-menu>\r\n                <a md-menu-item overlapTrigger=\"false\" [mdMenuTriggerFor]=\"menuButton\">Button<md-icon>keyboard_arrow_down</md-icon></a>\r\n                <md-menu #menuButton=\"mdMenu\" [overlapTrigger]=\"false\">\r\n                    <a md-menu-item routerLink=\"/button-item\" routerLinkActivate=\"active\" (click)=\"sidenav.close()\">Button</a>\r\n                    <a md-menu-item routerLink=\"/button-toggle\" routerLinkActivate=\"active\" (click)=\"sidenav.close()\">Button Toggle</a>\r\n                    <a md-menu-item routerLink=\"/chip-item\" routerLinkActivate=\"active\" (click)=\"sidenav.close()\">Chip</a>\r\n                    <a md-menu-item routerLink=\"/icon-item\" routerLinkActivate=\"active\" (click)=\"sidenav.close()\">Icon</a>\r\n                    <a md-menu-item routerLink=\"/progress-bar\" routerLinkActivate=\"active\" (click)=\"sidenav.close()\">Progress Bar</a>\r\n                    <a md-menu-item routerLink=\"/progress-spinner\" routerLinkActivate=\"active\" (click)=\"sidenav.close()\">Progress Spinner</a>\r\n                </md-menu>\r\n                <a md-menu-item [mdMenuTriggerFor]=\"menu\">Tables <md-icon>keyboard_arrow_down</md-icon></a>\r\n                <md-menu #menu=\"mdMenu\" [overlapTrigger]=\"false\">\r\n                    <a md-menu-item routerLink=\"/all-tables\" routerLinkActive=\"active\" (click)=\"sidenav.close()\">All Tables</a>\r\n                    <a md-menu-item routerLink=\"/table-basic\" routerLinkActive=\"active\" (click)=\"sidenav.close()\">Basic Table</a>\r\n                    <a md-menu-item routerLink=\"/table-filter\" routerLinkActive=\"active\" (click)=\"sidenav.close()\">Filter Table</a>\r\n                    <a md-menu-item routerLink=\"/table-sort\" routerLinkActive=\"active\" (click)=\"sidenav.close()\">Sort Table</a>\r\n                    <a md-menu-item routerLink=\"/table-paginator\" routerLinkActive=\"active\" (click)=\"sidenav.close()\">Paginated Table</a>\r\n                    <a md-menu-item routerLink=\"/table-complete\" routerLinkActivate=\"active\" (click)=\"sidenav.close()\">Complete Table</a>\r\n                </md-menu>\r\n            </md-nav-list>\r\n        </md-sidenav>\r\n        <div class=\"app-body\">\r\n            <router-outlet (activate)=\"onActivate($event)\"></router-outlet>\r\n        </div>\r\n    </md-sidenav-container>\r\n</div>";
 
 /***/ }),
 /* 335 */
@@ -15691,6 +15718,614 @@ __webpack_require__(124);
 __webpack_require__(123);
 module.exports = __webpack_require__(122);
 
+
+/***/ }),
+/* 412 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+var core_1 = __webpack_require__(2);
+var GridListComponent = (function () {
+    function GridListComponent() {
+        this.images = [
+            '/assets/microsoft.png',
+            '/assets/webpack.png',
+            '/assets/github-icon.png',
+            '/assets/visual-studio.png',
+            '/assets/angular.png',
+            '/assets/chrome.gif'
+        ];
+    }
+    return GridListComponent;
+}());
+GridListComponent = __decorate([
+    core_1.Component({
+        selector: 'grid-list-usage',
+        template: __webpack_require__(414),
+        styles: [__webpack_require__(415)]
+    })
+], GridListComponent);
+exports.GridListComponent = GridListComponent;
+
+
+/***/ }),
+/* 413 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(9)(undefined);
+// imports
+
+
+// module
+exports.push([module.i, "md-grid-list {\r\n    margin: 20px;\r\n    height: 600px;\r\n    justify-content: center;\r\n}\r\n\r\n.example-grid-tile {\r\n    background-color: #444;\r\n}\r\n\r\n.grid-image {\r\n    width: 90%;\r\n   \r\n}\r\n", ""]);
+
+// exports
+
+
+/***/ }),
+/* 414 */
+/***/ (function(module, exports) {
+
+module.exports = "<md-grid-list cols=\"6\" rowHeight=\"20em\" gutterSize=\"4px\">\r\n    <md-grid-tile *ngFor=\"let image of images\" class=\"example-grid-tile\">\r\n        <img [src]=\"image\" class=\"grid-image\" />\r\n    </md-grid-tile>\r\n</md-grid-list>";
+
+/***/ }),
+/* 415 */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+        var result = __webpack_require__(413);
+
+        if (typeof result === "string") {
+            module.exports = result;
+        } else {
+            module.exports = result.toString();
+        }
+    
+
+/***/ }),
+/* 416 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+var core_1 = __webpack_require__(2);
+var http_1 = __webpack_require__(401);
+var CardComponent = (function () {
+    function CardComponent(http) {
+        var _this = this;
+        this.http = http;
+        this.http.get('https://jsonplaceholder.typicode.com/photos')
+            .map(function (response) { return response.json(); })
+            .subscribe(function (res) { return _this.myData = res; });
+    }
+    return CardComponent;
+}());
+CardComponent = __decorate([
+    core_1.Component({
+        selector: 'card',
+        template: __webpack_require__(418),
+        styles: [__webpack_require__(419)]
+    }),
+    __metadata("design:paramtypes", [http_1.Http])
+], CardComponent);
+exports.CardComponent = CardComponent;
+
+
+/***/ }),
+/* 417 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(9)(undefined);
+// imports
+
+
+// module
+exports.push([module.i, ".example-content {\r\n    display: flex;\r\n    flex-wrap: wrap;\r\n    justify-content: center;\r\n    margin-bottom: 20px;\r\n}\r\n\r\n    .example-content md-card {\r\n        margin: 20px;\r\n        display: inline-block;\r\n        max-width: 430px;\r\n    }\r\n", ""]);
+
+// exports
+
+
+/***/ }),
+/* 418 */
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"example-content\">\r\n    <md-card *ngFor=\"let data of (myData ? myData.slice(0,3):[]); let i=index\">\r\n        <md-card-header>\r\n            <md-card-title>{{ data.title }}</md-card-title>\r\n            <md-card-subtitle><a href=\"https://jsonplaceholder.typicode.com/\" target=\"_blank\">JSONPlaceholder</a></md-card-subtitle>\r\n            <img md-card-avatar [src]=\"data.thumbnailUrl\" />\r\n        </md-card-header>\r\n        <img md-card-image [src]=\"data.url\" />\r\n        <md-card-content>\r\n            {{ data.title }}\r\n        </md-card-content>\r\n        <md-card-actions>\r\n            <button md-button>LIKE</button>\r\n            <button md-button>SHARE</button>\r\n        </md-card-actions>\r\n    </md-card>\r\n</div>";
+
+/***/ }),
+/* 419 */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+        var result = __webpack_require__(417);
+
+        if (typeof result === "string") {
+            module.exports = result;
+        } else {
+            module.exports = result.toString();
+        }
+    
+
+/***/ }),
+/* 420 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+var core_1 = __webpack_require__(2);
+var TabsComponent = (function () {
+    function TabsComponent() {
+    }
+    return TabsComponent;
+}());
+TabsComponent = __decorate([
+    core_1.Component({
+        selector: 'tabs-usage',
+        template: __webpack_require__(422),
+        styles: [__webpack_require__(423)]
+    })
+], TabsComponent);
+exports.TabsComponent = TabsComponent;
+
+
+/***/ }),
+/* 421 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(9)(undefined);
+// imports
+
+
+// module
+exports.push([module.i, ".tab-icon {\r\n    margin-right: 10px;\r\n}\r\n\r\n.example-content {\r\n    margin: 20px;\r\n    width: 500px;\r\n    height: 200px;\r\n}", ""]);
+
+// exports
+
+
+/***/ }),
+/* 422 */
+/***/ (function(module, exports) {
+
+module.exports = "<md-card class=\"example-content\">\r\n    <md-tab-group>\r\n        <md-tab>\r\n        <ng-template md-tab-label>\r\n            <md-icon class=\"tab-icon\">flight</md-icon> Flight\r\n        </ng-template>\r\n        <md-toolbar color=\"accent\">Flight</md-toolbar>\r\n        <p>\r\n            Flight detail information would appear in this tab.\r\n        </p>\r\n        </md-tab>\r\n        <md-tab>\r\n            <ng-template md-tab-label>\r\n                <md-icon class=\"tab-icon\">directions_car</md-icon> Rental Car\r\n            </ng-template>\r\n            <md-toolbar color=\"accent\">Rental Car</md-toolbar>\r\n            <p>\r\n                Rental car detail information would appear in this tab.\r\n            </p>\r\n        </md-tab>\r\n        <md-tab>\r\n            <ng-template md-tab-label>\r\n                <md-icon class=\"tab-icon\">hotel</md-icon> Hotel Reservation\r\n            </ng-template>\r\n            <md-toolbar color=\"accent\">Hotel Reservation</md-toolbar>\r\n            <p>\r\n                HOtel reservation detail information would appear in this tab.\r\n            </p>\r\n        </md-tab>\r\n    </md-tab-group>\r\n</md-card>";
+
+/***/ }),
+/* 423 */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+        var result = __webpack_require__(421);
+
+        if (typeof result === "string") {
+            module.exports = result;
+        } else {
+            module.exports = result.toString();
+        }
+    
+
+/***/ }),
+/* 424 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+var core_1 = __webpack_require__(2);
+var theme_service_1 = __webpack_require__(33);
+var ButtonToggleComponent = (function () {
+    function ButtonToggleComponent(themeService) {
+        this.themeService = themeService;
+        this.themes = this.themeService.getThemes();
+    }
+    ButtonToggleComponent.prototype.setTheme = function (theme) {
+        this.themeService.setTheme(theme);
+    };
+    return ButtonToggleComponent;
+}());
+ButtonToggleComponent = __decorate([
+    core_1.Component({
+        selector: 'button-toggle-usage',
+        template: __webpack_require__(434),
+        styles: [__webpack_require__(435)]
+    }),
+    __metadata("design:paramtypes", [theme_service_1.ThemeService])
+], ButtonToggleComponent);
+exports.ButtonToggleComponent = ButtonToggleComponent;
+
+
+/***/ }),
+/* 425 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+var core_1 = __webpack_require__(2);
+var ButtonComponent = (function () {
+    function ButtonComponent() {
+    }
+    return ButtonComponent;
+}());
+ButtonComponent = __decorate([
+    core_1.Component({
+        selector: 'button-usage',
+        template: __webpack_require__(431),
+        styles: [__webpack_require__(432)]
+    })
+], ButtonComponent);
+exports.ButtonComponent = ButtonComponent;
+
+
+/***/ }),
+/* 426 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+var core_1 = __webpack_require__(2);
+var ChipComponent = (function () {
+    function ChipComponent() {
+        this.colors = [
+            { name: 'None', color: '' },
+            { name: 'Primary', color: 'primary' },
+            { name: 'Accent', color: 'accent' },
+            { name: 'Warn', color: 'warn' }
+        ];
+    }
+    return ChipComponent;
+}());
+ChipComponent = __decorate([
+    core_1.Component({
+        selector: 'chip-usage',
+        template: __webpack_require__(437),
+        styles: [__webpack_require__(438)]
+    })
+], ChipComponent);
+exports.ChipComponent = ChipComponent;
+
+
+/***/ }),
+/* 427 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+var core_1 = __webpack_require__(2);
+var platform_browser_1 = __webpack_require__(120);
+var material_1 = __webpack_require__(47);
+var IconComponent = (function () {
+    function IconComponent(iconRegistry, sanitizer) {
+        iconRegistry.addSvgIcon('angular', sanitizer.bypassSecurityTrustResourceUrl('/assets/angular.png'));
+    }
+    return IconComponent;
+}());
+IconComponent = __decorate([
+    core_1.Component({
+        selector: 'icon-usage',
+        template: __webpack_require__(440),
+        styles: [__webpack_require__(441)]
+    }),
+    __metadata("design:paramtypes", [material_1.MdIconRegistry, platform_browser_1.DomSanitizer])
+], IconComponent);
+exports.IconComponent = IconComponent;
+
+
+/***/ }),
+/* 428 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+var core_1 = __webpack_require__(2);
+var ProgressBarComponent = (function () {
+    function ProgressBarComponent() {
+    }
+    return ProgressBarComponent;
+}());
+ProgressBarComponent = __decorate([
+    core_1.Component({
+        selector: 'progress-bar-usage',
+        template: __webpack_require__(443),
+        styles: [__webpack_require__(444)]
+    })
+], ProgressBarComponent);
+exports.ProgressBarComponent = ProgressBarComponent;
+
+
+/***/ }),
+/* 429 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+var core_1 = __webpack_require__(2);
+var ProgressSpinnerComponent = (function () {
+    function ProgressSpinnerComponent() {
+    }
+    return ProgressSpinnerComponent;
+}());
+ProgressSpinnerComponent = __decorate([
+    core_1.Component({
+        selector: 'progress-spinner-usage',
+        template: __webpack_require__(446),
+        styles: [__webpack_require__(447)]
+    })
+], ProgressSpinnerComponent);
+exports.ProgressSpinnerComponent = ProgressSpinnerComponent;
+
+
+/***/ }),
+/* 430 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(9)(undefined);
+// imports
+
+
+// module
+exports.push([module.i, ".example-container {\r\n    max-width: 800px;\r\n    margin: 20px;\r\n}\r\n\r\n.example-button-row {\r\n    display: flex;\r\n    align-items: center;\r\n    justify-content: space-around;\r\n    margin-bottom: 20px;\r\n}\r\n", ""]);
+
+// exports
+
+
+/***/ }),
+/* 431 */
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"example-container\">\r\n    <h3>Normal Buttons</h3>\r\n    <div class=\"example-button-row\">\r\n        <button md-button>Flat Button</button>\r\n        <button md-button color=\"primary\">Primary Flat Button</button>\r\n        <button md-button color=\"accent\">Accent Flat Button</button>\r\n        <button md-button color=\"warn\">Warn Flat Button</button>\r\n    </div>\r\n    <div class=\"example-button-row\">\r\n        <button md-raised-button>Flat Button</button>\r\n        <button md-raised-button color=\"primary\">Primary Raised Button</button>\r\n        <button md-raised-button color=\"accent\">Accent Raised Button</button>\r\n        <button md-raised-button color=\"warn\">Warn Raised Button</button>\r\n    </div>\r\n    <div class=\"example-button-row\">\r\n        <button md-fab color=\"\"><md-icon>add</md-icon></button>\r\n        <button md-fab color=\"primary\"><md-icon>add</md-icon></button>\r\n        <button md-fab color=\"accent\"><md-icon>add</md-icon></button>\r\n        <button md-fab color=\"warn\"><md-icon>add</md-icon></button>\r\n    </div>\r\n    <div class=\"example-button-row\">\r\n        <button md-mini-fab color=\"\"><md-icon>add</md-icon></button>\r\n        <button md-mini-fab color=\"primary\"><md-icon>add</md-icon></button>\r\n        <button md-mini-fab color=\"accent\"><md-icon>add</md-icon></button>\r\n        <button md-mini-fab color=\"warn\"><md-icon>add</md-icon></button>\r\n    </div>\r\n    <h3>Link Buttons</h3>\r\n    <div class=\"example-button-row\">\r\n        <a md-button>Flat Button</a>\r\n        <a md-button color=\"primary\">Primary Flat Button</a>\r\n        <a md-button color=\"accent\">Accent Flat Button</a>\r\n        <a md-button color=\"warn\">Warm Flat Button</a>\r\n    </div>\r\n    <div class=\"example-button-row\">\r\n        <a md-raised-button>Raised Button</a>\r\n        <a md-raised-button color=\"primary\">Primary Raised Button</a>\r\n        <a md-raised-button color=\"accent\">Accent Raised Button</a>\r\n        <a md-raised-button color=\"warn\">Warn Raised Button</a>\r\n    </div>\r\n    <div class=\"example-button-row\">\r\n        <a md-fab color=\"\"><md-icon>add</md-icon></a>\r\n        <a md-fab color=\"primary\"><md-icon>add</md-icon></a>\r\n        <a md-fab color=\"accent\"><md-icon>add</md-icon></a>\r\n        <a md-fab color=\"warn\"><md-icon>add</md-icon></a>\r\n    </div>\r\n    <div class=\"example-button-row\">\r\n        <a md-mini-fab color=\"\"><md-icon>add</md-icon></a>\r\n        <a md-mini-fab color=\"primary\"><md-icon>add</md-icon></a>\r\n        <a md-mini-fab color=\"accent\"><md-icon>add</md-icon></a>\r\n        <a md-mini-fab color=\"warn\"><md-icon>add</md-icon></a>\r\n    </div>\r\n</div>";
+
+/***/ }),
+/* 432 */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+        var result = __webpack_require__(430);
+
+        if (typeof result === "string") {
+            module.exports = result;
+        } else {
+            module.exports = result.toString();
+        }
+    
+
+/***/ }),
+/* 433 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(9)(undefined);
+// imports
+
+
+// module
+exports.push([module.i, "example-h2 {\r\n    margin: 10px;\r\n}\r\n\r\n.example-section {\r\n    display: flex;\r\n    align-content: center;\r\n    align-items: center;\r\n    height: 60px;\r\n}\r\n\r\n.example-margin {\r\n    margin: 0 10px;\r\n}\r\n\r\n.example-result-section {\r\n    margin-left: 10px;\r\n}\r\n", ""]);
+
+// exports
+
+
+/***/ }),
+/* 434 */
+/***/ (function(module, exports) {
+
+module.exports = "<md-card>\r\n    <md-card-content>\r\n        <h2 class=\"example-h2\">Button Toggle Configuration</h2>\r\n        <div class=\"example-section\">\r\n            <md-checkbox [(ngModel)]=\"vertical\" class=\"example-margin\">Vertical Button Toggle Group</md-checkbox>\r\n            <md-checkbox [(ngModel)]=\"disabled\" class=\"example-margin\">Button Toggle Disabled</md-checkbox>\r\n        </div>\r\n        <h2 class=\"example-h2\">Theme</h2>\r\n        <div class=\"example-result-section\">\r\n           <md-button-toggle-group #group=\"mdButtonToggleGroup\" [vertical]=\"vertical\">\r\n               <md-button-toggle *ngFor=\"let theme of themes\" value=\"theme\" (click)=\"disabled ? return : setTheme(theme)\" [disabled]=\"disabled\">\r\n                   {{theme.display}}\r\n               </md-button-toggle>\r\n           </md-button-toggle-group>\r\n        </div>\r\n    </md-card-content>\r\n</md-card>";
+
+/***/ }),
+/* 435 */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+        var result = __webpack_require__(433);
+
+        if (typeof result === "string") {
+            module.exports = result;
+        } else {
+            module.exports = result.toString();
+        }
+    
+
+/***/ }),
+/* 436 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(9)(undefined);
+// imports
+
+
+// module
+exports.push([module.i, "md-chip {\r\n    max-width: 200px;\r\n}\r\n\r\n.example-h2 {\r\n    margin: 10px;\r\n}\r\n\r\n.example-section {\r\n    margin: 20px;\r\n}\r\n", ""]);
+
+// exports
+
+
+/***/ }),
+/* 437 */
+/***/ (function(module, exports) {
+
+module.exports = "<md-card>\r\n    <md-card-content>\r\n        <h2 class=\"example-h2\">Basic Chips</h2>\r\n        <div class=\"example-section\">\r\n            <md-chip-list>\r\n                <md-chip *ngFor=\"let color of colors\" [color]=\"color.color\" selected=\"true\">\r\n                    {{color.name}}\r\n                </md-chip>\r\n            </md-chip-list>\r\n        </div>\r\n        <h2 class=\"example-h2\">Stacked Chips</h2>\r\n        <div class=\"example-section\">\r\n            <md-chip-list class=\"mat-chip-list-stacked\">\r\n                <md-chip *ngFor=\"let color of colors\" [color]=\"color.color\" selected=\"true\">\r\n                    {{color.name}}\r\n                </md-chip>\r\n            </md-chip-list>\r\n        </div>\r\n    </md-card-content>\r\n</md-card>";
+
+/***/ }),
+/* 438 */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+        var result = __webpack_require__(436);
+
+        if (typeof result === "string") {
+            module.exports = result;
+        } else {
+            module.exports = result.toString();
+        }
+    
+
+/***/ }),
+/* 439 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(9)(undefined);
+// imports
+
+
+// module
+exports.push([module.i, ".example-section a,\r\n.example-section a:visited {\r\n    color: #eee;\r\n    margin: 20px;\r\n}\r\n", ""]);
+
+// exports
+
+
+/***/ }),
+/* 440 */
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"example-section\">\r\n    <a md-raised-button href=\"https://angular.io\" target=\"_blank\">\r\n        <md-icon svgIcon=\"angular\"></md-icon> Angular Docs\r\n    </a>\r\n</div>";
+
+/***/ }),
+/* 441 */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+        var result = __webpack_require__(439);
+
+        if (typeof result === "string") {
+            module.exports = result;
+        } else {
+            module.exports = result.toString();
+        }
+    
+
+/***/ }),
+/* 442 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(9)(undefined);
+// imports
+
+
+// module
+exports.push([module.i, "body {\r\n}\r\n", ""]);
+
+// exports
+
+
+/***/ }),
+/* 443 */
+/***/ (function(module, exports) {
+
+module.exports = "<h2>Progress Bar</h2>";
+
+/***/ }),
+/* 444 */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+        var result = __webpack_require__(442);
+
+        if (typeof result === "string") {
+            module.exports = result;
+        } else {
+            module.exports = result.toString();
+        }
+    
+
+/***/ }),
+/* 445 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(9)(undefined);
+// imports
+
+
+// module
+exports.push([module.i, "body {\r\n}\r\n", ""]);
+
+// exports
+
+
+/***/ }),
+/* 446 */
+/***/ (function(module, exports) {
+
+module.exports = "<h2>Progress Spinner</h2>";
+
+/***/ }),
+/* 447 */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+        var result = __webpack_require__(445);
+
+        if (typeof result === "string") {
+            module.exports = result;
+        } else {
+            module.exports = result.toString();
+        }
+    
 
 /***/ })
 /******/ ]);

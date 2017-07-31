@@ -21,7 +21,7 @@
     <Content Remove="ClientApp\**" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="ClientApp\app\components\buttons\" />
+    <Folder Include="ClientApp\app\components\NewFolder\" />
     <Folder Include="ClientApp\app\components\popupsmodals\" />
   </ItemGroup>
   <Target Name="RunWebpack" AfterTargets="ComputeFilesToPublish">
