@@ -1,0 +1,22 @@
+﻿<md-card class="example-card">
+    <md-card-content>
+        <h2 class="example-h2">Basic Snackbar</h2>
+        <section class="example-section">
+            <md-input-container>
+                <input mdInput value="Disco Party!" placeholder="Message" #message />
+            </md-input-container>
+            <md-input-container>
+                <input mdInput value="Dance" placeholder="Action" #action />
+            </md-input-container>
+            <button md-raised-button color="primary" (click)="openSnackBar(message.value, action.value)">Show Snackbar</button>
+        </section>
+        <h2 class="example-h2">Component Snackbar</h2>
+        <section class="example-section">
+            <button md-raised-button color="primary" (click)="openSnackBarComponent()">Donut Party</button>
+        </section>
+        <h2 class="example-h2">Snackbar Output Console</h2>
+        <section class="example-console">
+            <p *ngFor="let snack of snacks">{{snack}}</p>
+        </section>
+    </md-card-content>
+</md-card>

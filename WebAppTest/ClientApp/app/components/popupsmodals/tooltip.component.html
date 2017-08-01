@@ -1,0 +1,13 @@
+﻿<md-card class="example-card">
+    <md-card-content>
+        <h2 class="exaple-h2">Tooltip Position</h2>
+        <md-select class="example-select" [(ngModel)]="position">
+            <md-option *ngFor="let pos of positions" [value]="pos">{{pos}}</md-option>
+        </md-select>
+        <div class="example-container">
+            <section class="example-section" mdTooltip="Tooltip!" [mdTooltipPosition]="position">
+                Show tooltip
+            </section>
+        </div>
+    </md-card-content>
+</md-card>

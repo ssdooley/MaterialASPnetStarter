@@ -45,7 +45,11 @@ import { ChipComponent } from './components/buttons/chip.component';
 import { IconComponent } from './components/buttons/icon.component';
 import { ProgressSpinnerComponent } from './components/buttons/progress-spinner.component';
 import { ProgressBarComponent } from './components/buttons/progress-bar.component';
-
+import { DialogComponent } from './components/popupsmodals/dialog.component';
+import { TooltipComponent } from './components/popupsmodals/tooltip.component';
+import { SnackbarComponent } from './components/popupsmodals/snackbar.component';
+import { ExampleDialogComponent } from './components/popupsmodals/example-dialog.component';
+import { ExampleSnackbarComponent } from './components/popupsmodals/example-snackbar.component';
 
 export const sharedConfig: NgModule = {
     bootstrap: [AppComponent],
@@ -83,11 +87,23 @@ export const sharedConfig: NgModule = {
         IconComponent,
         ProgressSpinnerComponent,
         ProgressBarComponent,
+        DialogComponent,
+        TooltipComponent,
+        SnackbarComponent,
+        ExampleDialogComponent,
+        ExampleSnackbarComponent
     ],
+
+    entryComponents: [
+        ExampleDialogComponent,
+        ExampleSnackbarComponent
+    ],
+
     providers: [
         ThemeService,
         DatabaseService
     ],
+    
     imports: [
         AppMaterialModule,
         RouterModule.forRoot([
@@ -122,6 +138,9 @@ export const sharedConfig: NgModule = {
             { path: 'progress-spinner', component: ProgressSpinnerComponent },
             { path: 'progress-bar', component: ProgressBarComponent },
             { path: 'all-tables', component: AllTablesComponent },
+            { path: 'dialog-item', component: DialogComponent },
+            { path: 'tooltip-item', component: TooltipComponent },
+            { path: 'snackbar-item', component: SnackbarComponent },
             { path: '**', redirectTo: 'home' }
         ])
     ]

@@ -1,0 +1,27 @@
+﻿.example-card {
+    margin: 20px;
+    max-width: 500px;
+}
+
+.example-select {
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.example-section {
+    padding: 10px;
+    background: #333;
+    width: 200px;
+}
+
+.example-container {
+    display: flex;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+}
+
+.example-h2 {
+    margin: 10px;
+}

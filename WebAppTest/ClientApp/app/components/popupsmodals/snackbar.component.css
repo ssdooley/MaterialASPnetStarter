@@ -1,0 +1,21 @@
+﻿.example-h2 {
+    margin: 10px;
+}
+
+.example-card {
+    max-width: 600px;
+    margin: 20px;
+}
+
+.example-section {
+    margin: 10px;
+}
+
+.example-console {
+    font-family: 'Consolas', Courier New, Courier, monospace;
+    background: #333;
+    margin: 10px;
+    padding: 10px;
+    overflow: auto;
+    height: 90px;
+}

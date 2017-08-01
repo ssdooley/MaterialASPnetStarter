@@ -9,6 +9,6 @@ import { MdIconRegistry } from '@angular/material';
 })
 export class IconComponent {
     constructor(iconRegistry: MdIconRegistry, sanitizer: DomSanitizer) {
-        iconRegistry.addSvgIcon('angular', sanitizer.bypassSecurityTrustResourceUrl('/assets/angular.png'));
+        iconRegistry.addSvgIcon('angular', sanitizer.bypassSecurityTrustResourceUrl('/assets/angular.svg'));
             }
 }

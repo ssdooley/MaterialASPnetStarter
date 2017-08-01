@@ -43,6 +43,12 @@
                     <a md-menu-item routerLink="/progress-bar" routerLinkActivate="active" (click)="sidenav.close()">Progress Bar</a>
                     <a md-menu-item routerLink="/progress-spinner" routerLinkActivate="active" (click)="sidenav.close()">Progress Spinner</a>
                 </md-menu>
+                <a md-menu-item overlapTrigger="false" [mdMenuTriggerFor]="menuPopup">Popups<md-icon>keyboard_arrow_down</md-icon></a>
+                <md-menu #menuPopup="mdMenu" [overlapTrigger]="false">
+                    <a md-menu-item routerLink="/dialog-item" routerLinkActivate="active" (click)="sidenav.close()">Dialog</a>
+                    <a md-menu-item routerLink="/tooltip-item" routerLinkActivate="active" (click)="sidenav.close()">Tooltip</a>
+                    <a md-menu-item routerLink="/snackbar-item" routerLinkActivate="active" (click)="sidenav.close()">Snackbar</a>
+                </md-menu>
                 <a md-menu-item [mdMenuTriggerFor]="menu">Tables <md-icon>keyboard_arrow_down</md-icon></a>
                 <md-menu #menu="mdMenu" [overlapTrigger]="false">
                     <a md-menu-item routerLink="/all-tables" routerLinkActive="active" (click)="sidenav.close()">All Tables</a>

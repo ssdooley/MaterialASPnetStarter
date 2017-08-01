@@ -5,4 +5,8 @@
     templateUrl: './progress-spinner.component.html',
     styleUrls: ['./progress-spinner.component.css']
 })
-export class ProgressSpinnerComponent { }
+export class ProgressSpinnerComponent {
+    color = 'primary';
+    mode = 'determinate';
+    value = 50;
+}
